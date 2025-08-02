@@ -140,44 +140,6 @@ namespace Ohoud10108WebApp.Demo
 
 
 
-        /* protected void gvPlants_RowCommand(object sender, GridViewCommandEventArgs e)
-         {
-             if (e.CommandName == "EditPlant")
-             {
-                 int index = Convert.ToInt32(e.CommandArgument);
-                 GridViewRow row = gvPlants.Rows[index];
-
-                 // تعبئة الحقول بالبيانات من الصف المختار
-                 hiddenPlantId.Value = gvPlants.DataKeys[index].Value.ToString();
-                 txtPlantName.Text = row.Cells[0].Text;
-                 ddlPlantType.SelectedItem.Text = row.Cells[1].Text;
-                 rblSunlight.SelectedValue = row.Cells[2].Text;
-                 rblWaterFreq.SelectedValue = row.Cells[3].Text;
-                 rblIsIndoor.SelectedValue = row.Cells[4].Text;
-
-                 // التبديل بين الأزرار
-                 btnAdd.Visible = false;
-                 btnUpdate.Visible = true;
-             }
-             else if (e.CommandName == "DeletePlant")
-             {
-                 int index = Convert.ToInt32(e.CommandArgument);
-                 string plantId = gvPlants.DataKeys[index].Value.ToString();
-
-                 string sql = "DELETE FROM plants WHERE plantId=@plantId";
-                 Dictionary<string, object> data = new Dictionary<string, object>
-         {
-             {"@plantId", plantId}
-         };
-                 CRUD crud = new CRUD();
-                 crud.InsertUpdateDelete(sql, data);
-                 loadPlantsGrid();
-                 lblMessage.Text = "Plant deleted successfully!";
-                 lblMessage.ForeColor = System.Drawing.Color.Green;
-             }
-         }*/
-
-
         protected void gvPlants_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
         {
             gvPlants.EditIndex = e.NewEditIndex;
@@ -255,33 +217,6 @@ namespace Ohoud10108WebApp.Demo
         }
 
 
-        /* protected void btnUpdate_Click(object sender, EventArgs e)
-         {
-             Dictionary<string, object> data = new Dictionary<string, object>
-     {
-         {"@plantId", hiddenPlantId.Value},
-         {"@plantName", txtPlantName.Text.Trim()},
-         {"@typeId", ddlPlantType.SelectedValue},
-         {"@sunlightNeed", rblSunlight.SelectedValue},
-         {"@waterFreq", rblWaterFreq.SelectedValue},
-         {"@isIndoor", rblIsIndoor.SelectedValue},
-         {"@notes", txtNotes.Text.Trim()},
-         {"@imageUrl", txtImageUrl.Text.Trim()},
-     };
-             CRUD crud = new CRUD();
-             string sql = "UPDATE plants SET plantName=@plantName, typeId=@typeId, sunlightNeed=@sunlightNeed, waterFreq=@waterFreq, isIndoor=@isIndoor isIndoor=@isIndoor, notes=@notes, imageUrl=@imageUrl WHERE plantId=@plantId";
-             crud.InsertUpdateDelete(sql, data);
-             clearForm();
-             loadPlantsGrid();
-
-             lblMessage.Text = "Plant updated successfully!";
-             lblMessage.ForeColor = System.Drawing.Color.Green;
-
-             btnAdd.Visible = true;
-             btnUpdate.Visible = false;
-         }*/
-
-
         protected void btnClear_Click(object sender, EventArgs e)
         {
             txtPlantName.Text = "";
@@ -298,7 +233,6 @@ namespace Ohoud10108WebApp.Demo
 
             lblMessage.Text = "";
         }
-
 
 
         private void clearForm()
@@ -350,3 +284,4 @@ namespace Ohoud10108WebApp.Demo
 
 
 }
+
