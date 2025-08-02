@@ -37,10 +37,10 @@ public class mailMgr : MailMessage
         //// constructor to initialize properties 
         myFrom = ConfigurationManager.AppSettings["emailFrom"];
         myTo = ConfigurationManager.AppSettings["emailTo"];
-        myHostsmtpAddress = ConfigurationManager.AppSettings["HostsmtpAddress"]; //"owa.kfmc.med.sa";// "smtp.gmail.com";//"smtp.mail.yahoo.com";  //mail.wdbcs.com 
+        myHostsmtpAddress = ConfigurationManager.AppSettings["HostsmtpAddress"]; // "smtp.gmail.com";//"smtp.mail.yahoo.com";  //mail.wdbcs.com 
         myPortNumber = int.Parse(ConfigurationManager.AppSettings["PortNumber"]);  //25;//587;
         myEnableSSL = bool.Parse(ConfigurationManager.AppSettings["EnableSSL"]);
-        myUserName = ConfigurationManager.AppSettings["emailUserName"]; // "aalhussein63@gmail.com";
+        myUserName = ConfigurationManager.AppSettings["emailUserName"]; // "your email@gmail.com";
         myPassword = ConfigurationManager.AppSettings["emailPassword"]; // my Email password 
 
         mySubject = " Notify Admin of Site Activity via gmail smtp ";
@@ -52,13 +52,7 @@ public class mailMgr : MailMessage
 
         xxxxxx  your name xxxxxxx
         xxxxxxx your position xxxxxx
-        Executive Administration of Information Technology
-        King Fahad Medical City
-        P.O.Box 59046, Riyadh 11525
-        Kingdom Of Saudi Arabia
-        (+966) 11 288 9999 Ext: 19100
-        (+966) 538692448
-        ahameed @kfmc.med.sa";
+        ;
     }
     // use this one 
     public  string sendEmailViaGmail() // worked 100%, this is a nice one use it with  properties
@@ -197,4 +191,5 @@ public class mailMgr : MailMessage
         }// end using 
     }
 }
+
 
