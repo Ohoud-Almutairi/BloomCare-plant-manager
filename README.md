@@ -39,16 +39,17 @@ to care for their greenery.
 
 ## 📸 Screenshots
 ### 🌿 Home Page
-![Home Page](screenshots/Home.png)
+![Home Page](BloomCareWebApp/Screenshots/Home.png)
 
 ### 🧾 Manage Plants
-![Manage Plants](screenshots/manage-plants.png)
+![Manage Plants](BloomCareWebApp/Screenshots/manage-plants.png)
 
 ### 🔍 Explore Plants
-![Explore Plants](screenshots/explore-plants.png)
+![Explore Plants](BloomCareWebApp/Screenshots/explore-plants.png)
 
 ### 📬 Contact Page
-![Contact Page](screenshots/contact.png)
+![Contact Page](BloomCareWebApp/Screenshots/contact.png)
+
 
 
 
